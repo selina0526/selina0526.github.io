@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo,git,github," />
+  <meta name="keywords" content="git,github,hexo," />
 
 
 
@@ -86,7 +86,7 @@
 
 <meta name="description" content="我这个个人博客已经搭建好很久了，但是因为不能直接编辑还有进行各种配置，觉得很麻烦就放弃了。然后坚持了一段时间的博客园，也放弃了，原因是文本编辑起来太麻烦，而且有种种限制，回头看看hexo，界面简洁漂亮，还能自定义，况且逼格够高，研究了一两天，觉得很有意思，现在不在北京，时间也充裕了许多，个人博客应该是进入IT界就开始经营的东西，结果到现在我的博客也没有个样子。现在写这个搭建指南，既是旧知识的回顾总">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo+Github 高逼格个人博客搭建指南">
+<meta property="og:title" content="Hexo+Github 高逼格个人博客搭建指南(准备篇)">
 <meta property="og:url" content="http://yoursite.com/2016/12/21/Hexo-Github-高逼格个人博客搭建指南/index.html">
 <meta property="og:site_name">
 <meta property="og:description" content="我这个个人博客已经搭建好很久了，但是因为不能直接编辑还有进行各种配置，觉得很麻烦就放弃了。然后坚持了一段时间的博客园，也放弃了，原因是文本编辑起来太麻烦，而且有种种限制，回头看看hexo，界面简洁漂亮，还能自定义，况且逼格够高，研究了一两天，觉得很有意思，现在不在北京，时间也充裕了许多，个人博客应该是进入IT界就开始经营的东西，结果到现在我的博客也没有个样子。现在写这个搭建指南，既是旧知识的回顾总">
@@ -97,9 +97,10 @@
 <meta property="og:image" content="http://yoursite.com/images/sshkey.png">
 <meta property="og:image" content="http://yoursite.com/images/generateSSH.png">
 <meta property="og:image" content="http://yoursite.com/images/addSSH.png">
-<meta property="og:updated_time" content="2016-12-21T08:53:51.967Z">
+<meta property="og:image" content="http://yoursite.com/images/hexoStart.png">
+<meta property="og:updated_time" content="2016-12-21T08:59:28.118Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo+Github 高逼格个人博客搭建指南">
+<meta name="twitter:title" content="Hexo+Github 高逼格个人博客搭建指南(准备篇)">
 <meta name="twitter:description" content="我这个个人博客已经搭建好很久了，但是因为不能直接编辑还有进行各种配置，觉得很麻烦就放弃了。然后坚持了一段时间的博客园，也放弃了，原因是文本编辑起来太麻烦，而且有种种限制，回头看看hexo，界面简洁漂亮，还能自定义，况且逼格够高，研究了一两天，觉得很有意思，现在不在北京，时间也充裕了许多，个人博客应该是进入IT界就开始经营的东西，结果到现在我的博客也没有个样子。现在写这个搭建指南，既是旧知识的回顾总">
 <meta name="twitter:image" content="http://yoursite.com/images/supplyGitHub.png">
 
@@ -135,7 +136,7 @@
 
 
 
-  <title> Hexo+Github 高逼格个人博客搭建指南 |  </title>
+  <title> Hexo+Github 高逼格个人博客搭建指南(准备篇) |  </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -282,7 +283,7 @@
             
             
               
-                Hexo+Github 高逼格个人博客搭建指南
+                Hexo+Github 高逼格个人博客搭建指南(准备篇)
               
             
           </h2>
@@ -375,7 +376,7 @@
 <h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>1.首先桌面右键 <strong>Gti Bash Here</strong>打开命令窗口，输入如下命令全局安装hexo。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo</div></pre></td></tr></table></figure></p>
 <p>2.新建一个文件夹，作为hexo的站点目录，具体位置你自己选择。进入该目录，右键 <strong>Git Bash Here</strong>，输入hexo初始化命令，执行成功后，站点目录下就会有hexo框架内容了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
 <p>3.下载所需依赖，站点目录下会出现名为node_modules的文件夹，里面放的都是hexo所需要的依赖包。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nmp install</div></pre></td></tr></table></figure></p>
-<p>4.执行hexo generate，生成博客目录public，再执行hexo server，启动服务器；访问<a href="http://localhost:4000/就可以查看本地博客了。" target="_blank" rel="external">http://localhost:4000/就可以查看本地博客了。</a></p>
+<p>4.执行hexo generate，生成博客目录public，再执行hexo server，启动服务器；访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 就可以查看本地博客了。<br><img src="/images/hexoStart.png"></p>
 
       
     </div>
@@ -399,11 +400,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
-          
             <a href="/tags/git/" rel="tag"># git</a>
           
             <a href="/tags/github/" rel="tag"># github</a>
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
         </div>
       
@@ -447,7 +448,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/12/21/Hexo-Github-高逼格个人博客搭建指南/"
-           data-title="Hexo+Github 高逼格个人博客搭建指南" data-url="http://yoursite.com/2016/12/21/Hexo-Github-高逼格个人博客搭建指南/">
+           data-title="Hexo+Github 高逼格个人博客搭建指南(准备篇)" data-url="http://yoursite.com/2016/12/21/Hexo-Github-高逼格个人博客搭建指南/">
       </div>
     
   </div>
