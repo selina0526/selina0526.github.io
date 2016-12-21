@@ -1,4 +1,4 @@
-/* normalize.css v3.0.2 | MIT License | git.io/normalize */
+/* normalize.css v3.0.2 | MIT License | git.io/normalize luosf */
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -1681,7 +1681,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffeb50;
+  background: #aa615d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2618,7 +2618,7 @@ a.search-result {
 .site-meta {
   padding: 20px 0;
   color: #fff;
-  background: #222;
+  background: #ffffff;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-meta {
