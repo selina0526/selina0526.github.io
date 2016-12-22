@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Welcome to Selina's website" />
+  <meta name="keywords" content="git,github,hexo," />
 
 
 
@@ -84,19 +84,25 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="在准备篇中，我们已经可以在本地查看hexo博客了，本篇将会介绍如何把hexo部署到github上，同时更改一些默认配置，使博客拥有用户属性。好了，开始吧❤
+hexo目录结构如果你确实能够访问 http://localhost:4000/ ，那么你的目录结构应该如上图（除.deploy_git外）。其中，node_modules中存放的是依赖包，source中存放的是一些资源，如你写好的文章等，th">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/12/15/hello-world/index.html">
+<meta property="og:title" content="Hexo+Github 高逼格个人博客搭建指南(配置篇)">
+<meta property="og:url" content="http://yoursite.com/2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-12-15T07:23:21.607Z">
+<meta property="og:description" content="在准备篇中，我们已经可以在本地查看hexo博客了，本篇将会介绍如何把hexo部署到github上，同时更改一些默认配置，使博客拥有用户属性。好了，开始吧❤
+hexo目录结构如果你确实能够访问 http://localhost:4000/ ，那么你的目录结构应该如上图（除.deploy_git外）。其中，node_modules中存放的是依赖包，source中存放的是一些资源，如你写好的文章等，th">
+<meta property="og:image" content="http://yoursite.com/images/files.png">
+<meta property="og:image" content="http://yoursite.com/images/deploy.png">
+<meta property="og:image" content="http://yoursite.com/images/excDeploy.png">
+<meta property="og:image" content="http://yoursite.com/images/configSite.png">
+<meta property="og:image" content="http://yoursite.com/images/languages.png">
+<meta property="og:updated_time" content="2016-12-22T08:20:23.218Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Hexo+Github 高逼格个人博客搭建指南(配置篇)">
+<meta name="twitter:description" content="在准备篇中，我们已经可以在本地查看hexo博客了，本篇将会介绍如何把hexo部署到github上，同时更改一些默认配置，使博客拥有用户属性。好了，开始吧❤
+hexo目录结构如果你确实能够访问 http://localhost:4000/ ，那么你的目录结构应该如上图（除.deploy_git外）。其中，node_modules中存放的是依赖包，source中存放的是一些资源，如你写好的文章等，th">
+<meta name="twitter:image" content="http://yoursite.com/images/files.png">
 
 
 
@@ -124,13 +130,13 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/15/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/"/>
 
 
 
 
 
-  <title> Hello World |  </title>
+  <title> Hexo+Github 高逼格个人博客搭建指南(配置篇) |  </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -253,7 +259,7 @@ Quick">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/15/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Selina Top↑L❤Ve">
@@ -277,7 +283,7 @@ Quick">
             
             
               
-                Hello World
+                Hexo+Github 高逼格个人博客搭建指南(配置篇)
               
             
           </h2>
@@ -292,8 +298,8 @@ Quick">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-15T15:23:21+08:00">
-                2016-12-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-22T11:03:41+08:00">
+                2016-12-22
               </time>
             
 
@@ -303,6 +309,28 @@ Quick">
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo篇/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo篇</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -311,8 +339,8 @@ Quick">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/12/15/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/15/hello-world/" itemprop="commentCount"></span>
+                <a href="/2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -343,15 +371,13 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>在准备篇中，我们已经可以在本地查看hexo博客了，本篇将会介绍如何把hexo部署到github上，同时更改一些默认配置，使博客拥有用户属性。好了，开始吧❤</p>
+<h2 id="hexo目录结构"><a href="#hexo目录结构" class="headerlink" title="hexo目录结构"></a>hexo目录结构</h2><p><img src="/images/files.png"><br>如果你确实能够访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> ，那么你的目录结构应该如上图（除.deploy_git外）。其中，node_modules中存放的是依赖包，source中存放的是一些资源，如你写好的文章等，themes中是主题。根目录下的<strong>_config.yml</strong>是站点配置文件。如果你成功将hexo部署到github，那么目录下就会出现.deploy_git文件夹。public是在本地生成的静态页面目录，用localhost访问的就是这个文件夹。</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>打开<strong>_config.yml</strong>文件，找到#Deployment，修改如下：<br><img src="/images/deploy.png"><br>这里要注意下，在repository后面一定要加.git。</p>
+<h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>1.在hexo站点目录右键 <strong>Git bash here</strong>，执行如下hexo deploy命令，中间需要输入github的用户名和密码：<br><img src="/images/excDeploy.png"><br>2.访问你的github吧，地址就是在<strong>准备篇</strong>中建库的库名，如 <a href="https://selina0526.github.io" target="_blank" rel="external">https://selina0526.github.io</a> ，如果部署前你访问过你会发现页面发生了变化，变成了 localhost:4000 的页面。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>现在我们已经可以访问我们的个人博客了，但是博客现在还没有体现博主的个性元素，我们需要通过配置文件的修改来设置博客的名字、博主的名字、主题、语言，甚至自定义一些页面样式。</p>
+<h3 id="修改博客基本信息"><a href="#修改博客基本信息" class="headerlink" title="修改博客基本信息"></a>修改博客基本信息</h3><p>打开<strong>_config.yml</strong>文件，在#site下面，我们可以看到如下内容。<br><img src="/images/configSite.png"><br>其中红色的是要修改的属性，黄色的是我自己的博客信息。title是博客标题，我这里设置为了空；subtitle是子标题；author是你的名字，可以随便起；language是博客语言，我设置的是简体中文，具体语言相关的文件在各主题下的languages目录下，language的值就是文件名，下图是默认主题中的语言文件：<br><img src="/images/languages.png"><br>其他参数不做描述，相信大家都可以理解。</p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>hexo有很多不错的主题，有网友做了排行，<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="external">https://www.zhihu.com/question/24422335</a> 。我选择的主题是这里排名第一的Next主题，Next主题还有使用说明，包括基本配置、第三方服务的应用等。大家可以按喜好选择，这里就不多做说明。等在本地修改为你想要的样子后，执行部署命令就可以放在github上了。<br>注意：冒号后面一定要有个空格再写值，否则不生效。</p>
 
       
     </div>
@@ -373,20 +399,30 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/21/Hexo-Github-高逼格个人博客搭建指南/" rel="next" title="Hexo+Github 高逼格个人博客搭建指南(准备篇)">
+                <i class="fa fa-chevron-left"></i> Hexo+Github 高逼格个人博客搭建指南(准备篇)
+              </a>
             
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/21/Hexo-Github-高逼格个人博客搭建指南/" rel="prev" title="Hexo+Github 高逼格个人博客搭建指南(准备篇)">
-                Hexo+Github 高逼格个人博客搭建指南(准备篇) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -418,8 +454,8 @@ Quick">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/15/hello-world/"
-           data-title="Hello World" data-url="http://yoursite.com/2016/12/15/hello-world/">
+      <div class="ds-thread" data-thread-key="2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/"
+           data-title="Hexo+Github 高逼格个人博客搭建指南(配置篇)" data-url="http://yoursite.com/2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/">
       </div>
     
   </div>
@@ -519,7 +555,7 @@ Quick">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo目录结构"><span class="nav-number">1.</span> <span class="nav-text">hexo目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署"><span class="nav-number">2.</span> <span class="nav-text">部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改配置文件"><span class="nav-number">2.1.</span> <span class="nav-text">修改配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到github"><span class="nav-number">2.2.</span> <span class="nav-text">部署到github</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改博客基本信息"><span class="nav-number">3.1.</span> <span class="nav-text">修改博客基本信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换主题"><span class="nav-number">3.2.</span> <span class="nav-text">更换主题</span></a></li></ol></li></ol></div>
             
 
           </div>

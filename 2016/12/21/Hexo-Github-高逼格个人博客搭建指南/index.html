@@ -97,8 +97,14 @@
 <meta property="og:image" content="http://yoursite.com/images/sshkey.png">
 <meta property="og:image" content="http://yoursite.com/images/generateSSH.png">
 <meta property="og:image" content="http://yoursite.com/images/addSSH.png">
+<meta property="og:image" content="http://yoursite.com/images/newRepository.png">
+<meta property="og:image" content="http://yoursite.com/images/createRepository.png">
+<meta property="og:image" content="http://yoursite.com/images/repositorySetting.png">
+<meta property="og:image" content="http://yoursite.com/images/chooseTheme.png">
+<meta property="og:image" content="http://yoursite.com/images/selectTheme.png">
 <meta property="og:image" content="http://yoursite.com/images/hexoStart.png">
-<meta property="og:updated_time" content="2016-12-21T09:08:04.877Z">
+<meta property="og:image" content="http://yoursite.com/images/home.png">
+<meta property="og:updated_time" content="2016-12-22T07:22:19.710Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github 高逼格个人博客搭建指南(准备篇)">
 <meta name="twitter:description" content="我这个个人博客已经搭建好很久了，但是因为不能直接编辑还有进行各种配置，觉得很麻烦就放弃了。然后坚持了一段时间的博客园，也放弃了，原因是文本编辑起来太麻烦，而且有种种限制，回头看看hexo，界面简洁漂亮，还能自定义，况且逼格够高，研究了一两天，觉得很有意思，现在不在北京，时间也充裕了许多，个人博客应该是进入IT界就开始经营的东西，结果到现在我的博客也没有个样子。现在写这个搭建指南，既是旧知识的回顾总">
@@ -352,6 +358,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o">本文总阅读量</i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
 
           
 
@@ -372,11 +383,12 @@
 <h3 id="邮箱验证"><a href="#邮箱验证" class="headerlink" title="邮箱验证"></a>邮箱验证</h3><p>1.登录github，点击右上角的头像，会出现一个列表，点击Settings。<br><img src="/images/gitHubSetting.png"><br>2.进入设置页面后，右侧导航中 <strong>Emails</strong> 会有一个警告图标，这是因为还未验证邮箱。进入你的注册邮箱（即Primary主邮箱）进行验证，若没有收到验证邮件，那么点击Resend重新发送。<br><img src="/images/emailVerify.png"></p>
 <h3 id="SSH的配置"><a href="#SSH的配置" class="headerlink" title="SSH的配置"></a>SSH的配置</h3><p>在Settings页面我们可以看到 <strong>SSH and GPG Keys</strong> 标题，在这里我们可以将本地生成的ssh key添加到github，这样github就会信任这台机器，本地的代码就可以上传到github上了。<br>1.首先，桌面右键点击 <strong>Git Bash Here</strong>，打开命令窗口。<br><img src="/images/gitBash.png"><br>2.输入如下命令，后面的邮箱就是你的主邮箱。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></div></pre></td></tr></table></figure></p>
 <p>3.回车，让你输入保存key的目录，可以不填，回车；让你输入一个密码，可以不填，回车；确认秘密，可以不填，回车。<br>4.成功生成key并显示保存路径，例如：<br><img src="/images/sshkey.png"><br>5.用记事本工具打开id_rsa.pub，全选复制；打开github，进入Settings，选择 <strong>SSH and GPG Keys</strong>，点击 <strong>New SSH key</strong> 按钮，title随便写，将复制的key粘贴到Key下的文本框内，点击 <strong>Add SSH key</strong> 按钮。<br><img src="/images/generateSSH.png"><br><img src="/images/addSSH.png"></p>
+<h3 id="建库"><a href="#建库" class="headerlink" title="建库"></a>建库</h3><p>我们需要在github上建一个repository以便未来存放我们的博客。<br>1.点击右上角的+，在下拉列表中选择 <strong>New repository</strong>。<br><img src="/images/newRepository.png"><br>2.填写你的repository名称，一般个人网站都会写成xxx.github.io，到时候访问的时候这个就是你个站的地址，比如我的就是selina0526.github.io，其中selina0526是我github的用户名；填写该库的描述，也可以不写；选择是Public(公开)还是Private(私有)，区别就是前者谁都可以看，但你来选择谁可以修改库中代码并提交，后者是你来选择谁可以看谁可以修改提交。然后点击 <strong>Create repository</strong>。<br><img src="/images/createRepository.png"><br>3.页面跳转后，点击Settings，在页面底部找到 <strong>Choose a theme</strong> 按钮。<br><img src="/images/repositorySetting.png"><br><img src="/images/chooseTheme.png"><br>4.选择主题，这里我们直接点击 <strong>Select theme</strong> 就可以了，因为我们后面要使用hexo，这个主题也就没什么用了。<br><img src="/images/selectTheme.png"></p>
 <h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p>终于可以安装hexo了！！！^O^ 这个就简单了</p>
 <h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>1.首先桌面右键 <strong>Gti Bash Here</strong>打开命令窗口，输入如下命令全局安装hexo。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo</div></pre></td></tr></table></figure></p>
 <p>2.新建一个文件夹，作为hexo的站点目录，具体位置你自己选择。进入该目录，右键 <strong>Git Bash Here</strong>，输入hexo初始化命令，执行成功后，站点目录下就会有hexo框架内容了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
 <p>3.下载所需依赖，站点目录下会出现名为node_modules的文件夹，里面放的都是hexo所需要的依赖包。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nmp install</div></pre></td></tr></table></figure></p>
-<p>4.执行hexo generate，生成博客目录public，再执行hexo server，启动服务器；访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 就可以查看本地博客了。<br><img src="/images/hexoStart.png"></p>
+<p>4.执行hexo generate，生成博客目录public，再执行hexo server，启动服务器；访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 就可以查看本地博客了。<br><img src="/images/hexoStart.png"><br><img src="/images/home.png"></p>
 
       
     </div>
@@ -423,6 +435,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/" rel="prev" title="Hexo+Github 高逼格个人博客搭建指南(配置篇)">
+                Hexo+Github 高逼格个人博客搭建指南(配置篇) <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -435,6 +451,12 @@
 
 
     <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
       
     </div>
   </div>
@@ -495,7 +517,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -548,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-number">1.</span> <span class="nav-text">git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载并安装git"><span class="nav-number">1.1.</span> <span class="nav-text">下载并安装git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github"><span class="nav-number">2.</span> <span class="nav-text">github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#申请github账号"><span class="nav-number">2.1.</span> <span class="nav-text">申请github账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#邮箱验证"><span class="nav-number">2.2.</span> <span class="nav-text">邮箱验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH的配置"><span class="nav-number">2.3.</span> <span class="nav-text">SSH的配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo"><span class="nav-number">3.</span> <span class="nav-text">hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo"><span class="nav-number">3.1.</span> <span class="nav-text">安装hexo</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-number">1.</span> <span class="nav-text">git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载并安装git"><span class="nav-number">1.1.</span> <span class="nav-text">下载并安装git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github"><span class="nav-number">2.</span> <span class="nav-text">github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#申请github账号"><span class="nav-number">2.1.</span> <span class="nav-text">申请github账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#邮箱验证"><span class="nav-number">2.2.</span> <span class="nav-text">邮箱验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH的配置"><span class="nav-number">2.3.</span> <span class="nav-text">SSH的配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建库"><span class="nav-number">2.4.</span> <span class="nav-text">建库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo"><span class="nav-number">3.</span> <span class="nav-text">hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo"><span class="nav-number">3.1.</span> <span class="nav-text">安装hexo</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -590,6 +612,22 @@
 
 
         
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user">本站访客数</i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye">本站总访问量</i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
 
         
       </div>

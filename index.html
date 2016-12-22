@@ -248,6 +248,163 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Selina Top↑L❤Ve">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/" itemprop="url">
+                  Hexo+Github 高逼格个人博客搭建指南(配置篇)
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-22T11:03:41+08:00">
+                2016-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo篇/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo篇</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/Hexo-Github-高逼格个人博客搭建指南-配置篇/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在准备篇中，我们已经可以在本地查看hexo博客了，本篇将会介绍如何把hexo部署到github上，同时更改一些默认配置，使博客拥有用户属性。好了，开始吧❤</p>
+<h2 id="hexo目录结构"><a href="#hexo目录结构" class="headerlink" title="hexo目录结构"></a>hexo目录结构</h2><p><img src="/images/files.png"><br>如果你确实能够访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> ，那么你的目录结构应该如上图（除.deploy_git外）。其中，node_modules中存放的是依赖包，source中存放的是一些资源，如你写好的文章等，themes中是主题。根目录下的<strong>_config.yml</strong>是站点配置文件。如果你成功将hexo部署到github，那么目录下就会出现.deploy_git文件夹。public是在本地生成的静态页面目录，用localhost访问的就是这个文件夹。</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>打开<strong>_config.yml</strong>文件，找到#Deployment，修改如下：<br><img src="/images/deploy.png"><br>这里要注意下，在repository后面一定要加.git。</p>
+<h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>1.在hexo站点目录右键 <strong>Git bash here</strong>，执行如下hexo deploy命令，中间需要输入github的用户名和密码：<br><img src="/images/excDeploy.png"><br>2.访问你的github吧，地址就是在<strong>准备篇</strong>中建库的库名，如 <a href="https://selina0526.github.io" target="_blank" rel="external">https://selina0526.github.io</a> ，如果部署前你访问过你会发现页面发生了变化，变成了 localhost:4000 的页面。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>现在我们已经可以访问我们的个人博客了，但是博客现在还没有体现博主的个性元素，我们需要通过配置文件的修改来设置博客的名字、博主的名字、主题、语言，甚至自定义一些页面样式。</p>
+<h3 id="修改博客基本信息"><a href="#修改博客基本信息" class="headerlink" title="修改博客基本信息"></a>修改博客基本信息</h3><p>打开<strong>_config.yml</strong>文件，在#site下面，我们可以看到如下内容。<br><img src="/images/configSite.png"><br>其中红色的是要修改的属性，黄色的是我自己的博客信息。title是博客标题，我这里设置为了空；subtitle是子标题；author是你的名字，可以随便起；language是博客语言，我设置的是简体中文，具体语言相关的文件在各主题下的languages目录下，language的值就是文件名，下图是默认主题中的语言文件：<br><img src="/images/languages.png"><br>其他参数不做描述，相信大家都可以理解。</p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>hexo有很多不错的主题，有网友做了排行，<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="external">https://www.zhihu.com/question/24422335</a> 。我选择的主题是这里排名第一的Next主题，Next主题还有使用说明，包括基本配置、第三方服务的应用等。大家可以按喜好选择，这里就不多做说明。等在本地修改为你想要的样子后，执行部署命令就可以放在github上了。<br>注意：冒号后面一定要有个空格再写值，否则不生效。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/21/Hexo-Github-高逼格个人博客搭建指南/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -366,11 +523,12 @@
 <h3 id="邮箱验证"><a href="#邮箱验证" class="headerlink" title="邮箱验证"></a>邮箱验证</h3><p>1.登录github，点击右上角的头像，会出现一个列表，点击Settings。<br><img src="/images/gitHubSetting.png"><br>2.进入设置页面后，右侧导航中 <strong>Emails</strong> 会有一个警告图标，这是因为还未验证邮箱。进入你的注册邮箱（即Primary主邮箱）进行验证，若没有收到验证邮件，那么点击Resend重新发送。<br><img src="/images/emailVerify.png"></p>
 <h3 id="SSH的配置"><a href="#SSH的配置" class="headerlink" title="SSH的配置"></a>SSH的配置</h3><p>在Settings页面我们可以看到 <strong>SSH and GPG Keys</strong> 标题，在这里我们可以将本地生成的ssh key添加到github，这样github就会信任这台机器，本地的代码就可以上传到github上了。<br>1.首先，桌面右键点击 <strong>Git Bash Here</strong>，打开命令窗口。<br><img src="/images/gitBash.png"><br>2.输入如下命令，后面的邮箱就是你的主邮箱。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></div></pre></td></tr></table></figure></p>
 <p>3.回车，让你输入保存key的目录，可以不填，回车；让你输入一个密码，可以不填，回车；确认秘密，可以不填，回车。<br>4.成功生成key并显示保存路径，例如：<br><img src="/images/sshkey.png"><br>5.用记事本工具打开id_rsa.pub，全选复制；打开github，进入Settings，选择 <strong>SSH and GPG Keys</strong>，点击 <strong>New SSH key</strong> 按钮，title随便写，将复制的key粘贴到Key下的文本框内，点击 <strong>Add SSH key</strong> 按钮。<br><img src="/images/generateSSH.png"><br><img src="/images/addSSH.png"></p>
+<h3 id="建库"><a href="#建库" class="headerlink" title="建库"></a>建库</h3><p>我们需要在github上建一个repository以便未来存放我们的博客。<br>1.点击右上角的+，在下拉列表中选择 <strong>New repository</strong>。<br><img src="/images/newRepository.png"><br>2.填写你的repository名称，一般个人网站都会写成xxx.github.io，到时候访问的时候这个就是你个站的地址，比如我的就是selina0526.github.io，其中selina0526是我github的用户名；填写该库的描述，也可以不写；选择是Public(公开)还是Private(私有)，区别就是前者谁都可以看，但你来选择谁可以修改库中代码并提交，后者是你来选择谁可以看谁可以修改提交。然后点击 <strong>Create repository</strong>。<br><img src="/images/createRepository.png"><br>3.页面跳转后，点击Settings，在页面底部找到 <strong>Choose a theme</strong> 按钮。<br><img src="/images/repositorySetting.png"><br><img src="/images/chooseTheme.png"><br>4.选择主题，这里我们直接点击 <strong>Select theme</strong> 就可以了，因为我们后面要使用hexo，这个主题也就没什么用了。<br><img src="/images/selectTheme.png"></p>
 <h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p>终于可以安装hexo了！！！^O^ 这个就简单了</p>
 <h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>1.首先桌面右键 <strong>Gti Bash Here</strong>打开命令窗口，输入如下命令全局安装hexo。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo</div></pre></td></tr></table></figure></p>
 <p>2.新建一个文件夹，作为hexo的站点目录，具体位置你自己选择。进入该目录，右键 <strong>Git Bash Here</strong>，输入hexo初始化命令，执行成功后，站点目录下就会有hexo框架内容了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
 <p>3.下载所需依赖，站点目录下会出现名为node_modules的文件夹，里面放的都是hexo所需要的依赖包。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nmp install</div></pre></td></tr></table></figure></p>
-<p>4.执行hexo generate，生成博客目录public，再执行hexo server，启动服务器；访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 就可以查看本地博客了。<br><img src="/images/hexoStart.png"></p>
+<p>4.执行hexo generate，生成博客目录public，再执行hexo server，启动服务器；访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 就可以查看本地博客了。<br><img src="/images/hexoStart.png"><br><img src="/images/home.png"></p>
 
           
         
@@ -580,7 +738,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -659,6 +817,22 @@
 
 
         
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user">本站访客数</i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye">本站总访问量</i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
 
         
       </div>
