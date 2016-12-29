@@ -1042,11 +1042,6 @@ pre .javascript .function {
   top: 10px;
   left: 10px;
 }
-@media (max-width: 767px) {
-  .site-nav-toggle {
-    display: block;
-  }
-}
 .site-nav-toggle button {
   margin-top: 2px;
   padding: 9px 10px;
@@ -1681,7 +1676,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #86951a;
+  background: #ab0d0d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2845,6 +2840,54 @@ a.search-result {
     text-align: justify;
   }
 }
-.site-meta {
-  background: url("../images/bg.png");
+.headband {
+  height: 50px;
+  margin-bottom: 5px;
+}
+.headband h1 {
+  display: none;
+  text-indent: -9999px;
+  float: left;
+  width: 100px;
+  height: 50px;
+  background: url("/images/logo.png");
+}
+.headband nav {
+  float: right;
+}
+.headband nav li {
+  float: left;
+  margin-right: 10px;
+}
+.headband nav a {
+  border-bottom: none;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .headband nav a {
+    display: none;
+  }
+}
+.headband nav a:hover {
+  text-decoration: underline;
+}
+.headband nav .fa {
+  color: #fff;
+}
+.custom-logo {
+  position: relative;
+  overflow: hidden;
+}
+.site-meta-headline {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menu {
+  background: #fff;
+}
+@media (max-width: 767px) {
+  .site-meta {
+    display: none;
+  }
 }

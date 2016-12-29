@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[Hexo+Github 高逼格个人博客搭建指南(配置篇)]]></title>
+      <url>%2F2016%2F12%2F22%2FHexo-Github-%E9%AB%98%E9%80%BC%E6%A0%BC%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97-%E9%85%8D%E7%BD%AE%E7%AF%87%2F</url>
+      <content type="text"><![CDATA[在准备篇中，我们已经可以在本地查看hexo博客了，本篇将会介绍如何把hexo部署到github上，同时更改一些默认配置，使博客拥有用户属性。好了，开始吧❤ hexo目录结构如果你确实能够访问 http://localhost:4000/ ，那么你的目录结构应该如上图（除.deploy_git外）。其中，node_modules中存放的是依赖包，source中存放的是一些资源，如你写好的文章等，themes中是主题。根目录下的_config.yml是站点配置文件。如果你成功将hexo部署到github，那么目录下就会出现.deploy_git文件夹。public是在本地生成的静态页面目录，用localhost访问的就是这个文件夹。 部署修改配置文件打开_config.yml文件，找到#Deployment，修改如下：这里要注意下，在repository后面一定要加.git。 部署到github1.在hexo站点目录右键 Git bash here，执行如下hexo deploy命令，中间需要输入github的用户名和密码：2.访问你的github吧，地址就是在准备篇中建库的库名，如 https://selina0526.github.io ，如果部署前你访问过你会发现页面发生了变化，变成了 localhost:4000 的页面。 配置现在我们已经可以访问我们的个人博客了，但是博客现在还没有体现博主的个性元素，我们需要通过配置文件的修改来设置博客的名字、博主的名字、主题、语言，甚至自定义一些页面样式。 修改博客基本信息打开_config.yml文件，在#site下面，我们可以看到如下内容。其中红色的是要修改的属性，黄色的是我自己的博客信息。title是博客标题，我这里设置为了空；subtitle是子标题；author是你的名字，可以随便起；language是博客语言，我设置的是简体中文，具体语言相关的文件在各主题下的languages目录下，language的值就是文件名，下图是默认主题中的语言文件：其他参数不做描述，相信大家都可以理解。 更换主题hexo有很多不错的主题，有网友做了排行，https://www.zhihu.com/question/24422335 。我选择的主题是这里排名第一的Next主题，Next主题还有使用说明，包括基本配置、第三方服务的应用等。大家可以按喜好选择，这里就不多做说明。等在本地修改为你想要的样子后，执行部署命令就可以放在github上了。注意：冒号后面一定要有个空格再写值，否则不生效。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo+Github 高逼格个人博客搭建指南(准备篇)]]></title>
+      <url>%2F2016%2F12%2F21%2FHexo-Github-%E9%AB%98%E9%80%BC%E6%A0%BC%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97%2F</url>
+      <content type="text"><![CDATA[我这个个人博客已经搭建好很久了，但是因为不能直接编辑还有进行各种配置，觉得很麻烦就放弃了。然后坚持了一段时间的博客园，也放弃了，原因是文本编辑起来太麻烦，而且有种种限制，回头看看hexo，界面简洁漂亮，还能自定义，况且逼格够高，研究了一两天，觉得很有意思，现在不在北京，时间也充裕了许多，个人博客应该是进入IT界就开始经营的东西，结果到现在我的博客也没有个样子。现在写这个搭建指南，既是旧知识的回顾总结，又是新知识的学习记录，同时希望看到的朋友多多指正，如果有幸帮助了别人，意义就更大了。废话不再多说，现在正式入主题。^O^ git下载并安装git进入git下载页面，下载合适的版本，并安装。一路 Next ，到了 Select Components 界面，勾选 Git Bash Here 和 Git GUI Here。一路 next，完成安装。右键桌面，会看到右键菜单多了 Git Bash Here 和 Git GUI Here 两项。此时我们就可以在资源管理器中使用git了。注意：我这次换了电脑重新安装git后发现右键git bash虽然弹出窗口，但当前目录竟然不在Desktop，后来发现是因为开启了搜狗壁纸的图标整理，关掉图表整理就好了。 github申请github账号1.注册github，填写昵称，输入邮箱地址，设置密码，没问题后点击 Sign up for GitHub 按钮。2.这时页面跳转，这里要选择成为免费用户还是付费用户，当然了，我们选择免费用户就好了，除非你土豪你不在乎你就付费吧。O(∩_∩)O~3.第三步会让你选择一些如开发水平、注册github的目的等，这些都是可选项，然后点击 Submit 按钮，完成注册。 邮箱验证1.登录github，点击右上角的头像，会出现一个列表，点击Settings。2.进入设置页面后，右侧导航中 Emails 会有一个警告图标，这是因为还未验证邮箱。进入你的注册邮箱（即Primary主邮箱）进行验证，若没有收到验证邮件，那么点击Resend重新发送。 SSH的配置在Settings页面我们可以看到 SSH and GPG Keys 标题，在这里我们可以将本地生成的ssh key添加到github，这样github就会信任这台机器，本地的代码就可以上传到github上了。1.首先，桌面右键点击 Git Bash Here，打开命令窗口。2.输入如下命令，后面的邮箱就是你的主邮箱。1$ ssh-keygen -t rsa -C "your_email@example.com" 3.回车，让你输入保存key的目录，可以不填，回车；让你输入一个密码，可以不填，回车；确认秘密，可以不填，回车。4.成功生成key并显示保存路径，例如：5.用记事本工具打开id_rsa.pub，全选复制；打开github，进入Settings，选择 SSH and GPG Keys，点击 New SSH key 按钮，title随便写，将复制的key粘贴到Key下的文本框内，点击 Add SSH key 按钮。 建库我们需要在github上建一个repository以便未来存放我们的博客。1.点击右上角的+，在下拉列表中选择 New repository。2.填写你的repository名称，一般个人网站都会写成xxx.github.io，到时候访问的时候这个就是你个站的地址，比如我的就是selina0526.github.io，其中selina0526是我github的用户名；填写该库的描述，也可以不写；选择是Public(公开)还是Private(私有)，区别就是前者谁都可以看，但你来选择谁可以修改库中代码并提交，后者是你来选择谁可以看谁可以修改提交。然后点击 Create repository。3.页面跳转后，点击Settings，在页面底部找到 Choose a theme 按钮。4.选择主题，这里我们直接点击 Select theme 就可以了，因为我们后面要使用hexo，这个主题也就没什么用了。 hexo终于可以安装hexo了！！！^O^ 这个就简单了 安装hexo1.首先桌面右键 Gti Bash Here打开命令窗口，输入如下命令全局安装hexo。1$ npm install -g hexo 2.新建一个文件夹，作为hexo的站点目录，具体位置你自己选择。进入该目录，右键 Git Bash Here，输入hexo初始化命令，执行成功后，站点目录下就会有hexo框架内容了。1$ hexo init 3.下载所需依赖，站点目录下会出现名为node_modules的文件夹，里面放的都是hexo所需要的依赖包。1$ nmp install 4.执行hexo generate，生成博客目录public，再执行hexo server，启动服务器；访问 http://localhost:4000/ 就可以查看本地博客了。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>%2F2016%2F12%2F15%2Fhello-world%2F</url>
+      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    </entry>
+
+    
+  
+  
+</search>
